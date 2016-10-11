@@ -1,0 +1,16 @@
+<h1>ToDo App</h1>
+<ul>
+    <li *ngFor= "let item of list; let i = index;">
+        <table>
+            <tr>
+                <td>{{i + ":"}}</td>
+                <td>{{item}} </td>
+                <td><button class="remove" (click)="remove(i)">remove</button></td>    
+            </tr>
+        </table>
+    </li>
+</ul>
+
+<input type="text" [(ngModel)]= "inputItem">
+
+<button (click)="add()">add</button>
